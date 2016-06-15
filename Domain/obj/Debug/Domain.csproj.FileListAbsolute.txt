@@ -1,0 +1,5 @@
+c:\users\tefferson.guterres\documents\visual studio 2012\Projects\SpecTrain\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+c:\users\tefferson.guterres\documents\visual studio 2012\Projects\SpecTrain\Domain\bin\Debug\Domain.dll
+c:\users\tefferson.guterres\documents\visual studio 2012\Projects\SpecTrain\Domain\bin\Debug\Domain.pdb
+c:\users\tefferson.guterres\documents\visual studio 2012\Projects\SpecTrain\Domain\obj\Debug\Domain.dll
+c:\users\tefferson.guterres\documents\visual studio 2012\Projects\SpecTrain\Domain\obj\Debug\Domain.pdb
