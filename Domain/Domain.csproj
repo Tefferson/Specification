@@ -50,7 +50,6 @@
     <Compile Include="Specification\OrSpecification.cs" />
     <Compile Include="Specification\Product\CheapProductSpecification.cs" />
     <Compile Include="Specification\Product\PriceBetweenSpec.cs" />
-    <Compile Include="Specification\Product\ProductSpecification.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

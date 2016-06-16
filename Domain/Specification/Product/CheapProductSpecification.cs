@@ -6,17 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Specification.Product
 {
-    public class CheapProductSpecification : ProductSpecification
+    public class CheapProductSpecification : DirectSpecification<Domain.Product>
     {
-        private decimal price;
         public CheapProductSpecification(decimal price)
-        {
-            this.price = price;
-        }
-
-        public override bool IsSatisfiedBy(Domain.Product product)
-        {
-            return product.Price <= price;
-        }
+            : base(p => p.Price <= price) { }
     }
 }

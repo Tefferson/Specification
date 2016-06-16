@@ -6,20 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Specification.Product
 {
-    public class PriceBetweenSpec : ProductSpecification 
+    public class PriceBetweenSpec : AndSpecification<Domain.Product>
     {
-        private decimal leftPrice;
-        private decimal rightPrice;
-
         public PriceBetweenSpec(decimal leftPrice, decimal rightPrice)
-        {
-            this.leftPrice = leftPrice;
-            this.rightPrice = rightPrice;
-        }
-
-        public override bool IsSatisfiedBy(Domain.Product product)
-        {
-            return product.Price >= leftPrice && product.Price <= rightPrice;
-        }
+            : base(new DirectSpecification<Domain.Product>(p => p.Price >= leftPrice),
+            new DirectSpecification<Domain.Product>(p => p.Price <= rightPrice)) { }
     }
 }
