@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,8 +9,8 @@ namespace Domain.Specification
 {
     public class DirectSpecification<T> : ISpecification<T>
     {
-        private Func<T, bool> expression;
-        public DirectSpecification(Func<T, bool> expression)
+        private Expression<Func<T, bool>> expression;
+        public DirectSpecification(Expression<Func<T, bool>> expression)
         {
             if (expression == null)
                 throw new ArgumentNullException();
@@ -18,7 +19,7 @@ namespace Domain.Specification
 
         public bool IsSatisfiedBy(T o)
         {
-            return this.expression(o);
+            return this.expression.Compile()(o);
         }
     }
 }

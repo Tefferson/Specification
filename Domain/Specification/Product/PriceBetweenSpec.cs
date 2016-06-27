@@ -9,7 +9,6 @@ namespace Domain.Specification.Product
     public class PriceBetweenSpec : AndSpecification<Domain.Product>
     {
         public PriceBetweenSpec(decimal leftPrice, decimal rightPrice)
-            : base(new DirectSpecification<Domain.Product>(p => p.Price >= leftPrice),
-            new DirectSpecification<Domain.Product>(p => p.Price <= rightPrice)) { }
+            : base(p => p.Price >= leftPrice, p => p.Price <= rightPrice) { }
     }
 }
